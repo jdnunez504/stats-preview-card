@@ -31,7 +31,16 @@ h1 {
   font-size:1.7rem;
   line-height: 2rem;
   font-weight: 700;
+  @include breakpoint-up(medium){
+    font-size: 2rem;
+    line-height: 2.75rem;
+  }
   @include breakpoint-up(large){
+    font-size: 2.125rem;
+    line-height: 2.75rem;
+    text-align: left;
+  }
+  @include breakpoint-up(xlarge){
     font-size: 2.25rem;
     line-height: 2.75rem;
     text-align: left;
@@ -45,7 +54,17 @@ h1 {
   font-size: .9175rem;
   font-weight: 400;
   line-height: 1.5625;
+  color: $lightGray;
+  @include breakpoint-up(medium){
+    font-size: .9175rem;
+    line-height: 2rem;
+  }
   @include breakpoint-up(large){
+    font-size: .8125rem;
+    line-height: 1.7rem;
+    text-align: left;
+  }
+  @include breakpoint-up(xlarge){
     font-size: .9175rem;
     line-height: 1.7rem;
     text-align: left;
@@ -58,25 +77,48 @@ h1 {
   }
   &__type {
     font-size: .75rem;
+    color: $lightGray;
   }
 }
 
 //Spacing
 .container {
-  max-width: 75rem;
+  max-width: 90rem;
   margin: 0 auto;
   &--pall {
     padding-top: 5.5rem;
     padding-left: 1.5rem;
     padding-bottom: 5.5rem;
     padding-right: 1.5rem;
+    @include breakpoint-up(medium){
+      padding-top: 6.5rem;
+      padding-left: 5rem;
+      padding-bottom: 6.5rem;
+      padding-right: 5rem;
+    }
+    @include breakpoint-up(large){
+      padding-top: 7.0625rem;
+      padding-left: 6.3125rem;
+      padding-bottom: 7.0625rem;
+      padding-right: 6.3125rem;
+    }
+    @include breakpoint-up(xlarge){
+      padding-top: 11.0625rem;
+      padding-left: 10.3125rem;
+      padding-bottom: 11.0625rem;
+      padding-right: 10.3125rem;
+    }
   }
   &--px {
     padding-left: 2.125rem;
     padding-right: 2.125rem;
+    @include breakpoint-up(medium){
+      padding-left: 4.25rem;
+      padding-right: 4.25rem;
+    }
     @include breakpoint-up(large){
-      padding-left: 4.5rem;
-      padding-right: 4.5rem;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
     }
   }
 }
