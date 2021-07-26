@@ -14,9 +14,6 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,83 +25,83 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+[Desktop Solution](./screenshot-desktop.png)
+[Mobile Solution](./screenshot-mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/jdnunez504/stats-preview-card)
+- Live Site URL: [Github Page](https://jdnunez504.github.io/stats-preview-card/)
 
 ## My process
 
 ### Built with
-
 - Semantic HTML5 markup
+- Mobile-first workflow
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- SCSS
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Mixins for responsive styles
+- Creating color overlay for images
+- Using images in an element vs in the background (this project uses the image in the background-image property)
+- Practice with responsive styling between mobile and desktop
+- Practice with mobile-first design
+- Practice using flex-box
+- Practice with using class components
 
 To see how you can add code snippets, see below:
 
+Div element for background image and overlay:
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="main__overlay"></div>
 ```
+Styling for image overlay:
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.main__overlay {
+  height: auto;
+  width: 100%;
+  padding-bottom: 73.4%;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../../images/image-header-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+.main__overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(171, 92, 219, 0.4), rgba(171, 92, 219, 0.4));
+  mix-blend-mode: color;
 }
+/* There is another overlay pseudo element added here but probably unecessary */
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Choosing breakpoints for devices
+- CSS inheritance in responsive design
+- BEM
+- Limiting refactoring and planning ahead
+- Using CSS Grid
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Code Pen](https://codepen.io) - Good for testing out different strategies (for image overlays in this project).
+- [FrontEnd Resource](https://frontendresource.com/css-background-image-color/) - How to use color overlay with background images.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) - Reference for the background-size property.
+- [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Good reference guide for flexbox.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Github - [JD Nunez](https://github.com/jdnunez504)
+- Frontend Mentor - [@jdnunez504](https://www.frontendmentor.io/profile/jdnunez504)
